@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="SHORTCUT ICON" href="http://h.imguol.com/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://h.imguol.com/icon-touch.png" />
+    <link rel="SHORTCUT ICON" href="img/favicon.ico" />
 
-    <title>UOL - Browser Boot</title>
+    <title>Browser Boot</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.uol.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,15 +26,13 @@
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/browserBoot.css" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
+  <!-- NAVBAR ================================================== -->
   <body>
 
     <div class="navbar-wrapper">
       <div class="container">
 
         <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
-
 
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,10 +45,10 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a data-target="#myCarousel" data-slide-to="0" href="#">Favoritos</a></li>
-                <li><a href="#" data-target="#myCarousel" data-slide-to="1" >Aniversários</a></li>
-                <li><a href="#" data-target="#myCarousel" data-slide-to="2" >Sprint</a></li>
-                <li><a href="#" data-target="#myCarousel" data-slide-to="3" >Contatos</a></li>
+                <li class="active"><a data-target="#myCarousel" data-slide-to="0" href="#">&middot;</a></li>
+                <li><a href="#" data-target="#myCarousel" data-slide-to="1" >&middot;</a></li>
+                <li><a href="#" data-target="#myCarousel" data-slide-to="2" >&middot;</a></li>
+                <li><a href="#" data-target="#myCarousel" data-slide-to="3" >&middot;</a></li>
               </ul>
               <div id="googleBox" >
                   <form action="https://www.google.com.br/#q=" onsubmit="return UOL.browserBoot.search.cheatGoogle()" id="googleSearch"  >
@@ -61,7 +58,7 @@
                           <input type="text" id="googleSearchQuery" autocomplete="off" >
                         </td>
                         <td>
-                          <input type="submit" value="ok" class="btn btn-sm btn-primary"  />
+                          <input type="submit" value="ok" class="btn btn-sm hidden-lg"  />
                         </td>
                       </tr>
                     </table>
@@ -75,26 +72,25 @@
     </div>
 
 
-    <!-- Carousel
-    ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
+
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
+
       <div class="carousel-inner">
         <div class="item active">
-         <img src="img/item1.jpg" alt="Second slide">
+         <img src="img/item1.1.jpg" >
           <div class="container" style="text-align: left;" >
 
 
             <div class="carousel-caption">
 
 
-              <div class="favoriteCol" >
+              <div class="favoriteCol" style="margin-left: 366px;" >
 
                 <h3><span class="glyphicon glyphicon-road"></span>cesso</h3>
                 <div class="favoriteColItem" >
@@ -108,50 +104,75 @@
 
                 <h3><span class="glyphicon glyphicon-globe"></span> SAC</h3>
                 <div class="favoriteColItem" >
-                  <a href="https://sac.uol.com.br" class="btn btn-sm btn-primary" ><img src="img/logoUol.png" alt="Second slide"></a>
+                  <div class="btn-group">
+                      <a href="https://sac.uol.com.br" class="btn btn-sm btn-primary" ><img src="img/logoUolBallOnly.png" ></a>
+                      <a href="https://sac.uol.com.br/detalhes.html?skin=bol&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoBol.png" ></a>
+                      <a href="https://sac.uol.com.br/detalhes.html?skin=folha&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoFolha.png" ></a>
+                      <a href="https://sac.uol.com.br/detalhes.html?skin=zipmail&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoZip.png" ></a>
+                  </div>
                 </div>
 
+                <h3><span class="glyphicon glyphicon-copyright-mark"></span>adastro</h3>
                 <div class="favoriteColItem" >
-                  <a href="https://sac.uol.com.br/detalhes.html?skin=bol&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoBol.png" alt="Second slide"> BOL</a>
+                  <div class="btn-group">
+                    <a href="http://assine.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoUolBallOnly.png" ></a>
+                    <a href="https://cadastro.uol.com.br/indexb.html?skin=bol/pf" class="btn btn-sm btn-primary" ><img src="img/logoBol.png" ></a>
+                    <a href="https://cadastro.uol.com.br/indexb.html?skin=folha" class="btn btn-sm btn-primary" ><img src="img/logoFolha.png" ></a>
+                    <a href="https://cadastro.uol.com.br/indexb.html?skin=zipmail" class="btn btn-sm btn-primary" ><img src="img/logoZip.png" ></a>
+                  </div>
                 </div>
-
-                <div class="favoriteColItem" >
-                  <a href="https://sac.uol.com.br/detalhes.html?skin=folha&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoFolha.png" alt="Second slide"> Folha</a>
-                </div>
-
-                <div class="favoriteColItem" >
-                  <a href="https://sac.uol.com.br/detalhes.html?skin=zipmail&unlock=true" class="btn btn-sm btn-primary" ><img src="img/logoZip.png" alt="Second slide"> Zip</a>
-                </div>
-
-
 
               </div>
 
 
-              <div class="favoriteCol">
+              <div class="favoriteCol" style="margin-left: 96px;" >
 
-                    <h3><span class="glyphicon glyphicon-copyright-mark"></span>adastro</h3>
+                  <h3><span class="glyphicon glyphicon-cutlery"></span> teis</h3>
 
-                    <div class="favoriteColItem" >
-                      <a href="http://assine.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoUol.png" alt="Second slide"></a>
+                  <div class="favoriteColItem" >
+                    <a href="http://a1-integcadf-s-pla1:8080/jenkins/" class="btn btn-sm btn-primary" ><img src="img/logoJenkins.png" > Jenkins</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://macs.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoMacs.png" > &nbsp; MACS</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <div class="btn-group">
+                       <a  class="btn btn-sm btn-primary" href="http://camaleao.intranet.uol.com.br/" class="btn btn-sm btn-primary" ><img src ="img/logoCamaleao.png" style="height:16px; width:16px;"> Camaleão</a>
+                       <a  class="btn btn-sm btn-primary" href="http://camaleao.intranet.uol.com.br/git/reload" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-refresh" ></span></a>
                     </div>
+                  </div>
 
-                    <div class="favoriteColItem" >
-                      <a href="https://cadastro.uol.com.br/indexb.html?skin=bol/pf" class="btn btn-sm btn-primary" ><img src="img/logoBol.png" alt="Second slide"> BOL</a>
+                  <div class="favoriteColItem" >
+                    <div class="btn-group">
+                      <a href="https://jira.intranet.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoJira.png" > Jira &nbsp; </span> </a>
+                      <a href="#" id="bkButton" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-share-alt"></span></a>
                     </div>
+                  </div>
 
-                    <div class="favoriteColItem" >
-                      <a href="https://cadastro.uol.com.br/indexb.html?skin=folha" class="btn btn-sm btn-primary" ><img src="img/logoFolha.png" alt="Second slide"> Folha</a>
-                    </div>
+                  <div class="favoriteColItem" >
+                    <a  href="https://confluence.intranet.uol.com.br/confluence/display/PL4/Home" class="btn btn-sm btn-primary" ><img src="img/logoConfluence.png" > Confluence</a>
+                  </div>
 
-                    <div class="favoriteColItem" >
-                      <a href="https://cadastro.uol.com.br/indexb.html?skin=zipmail" class="btn btn-sm btn-primary" ><img src="img/logoZip.png" alt="Second slide"> Zip</a>
-                    </div>
+                  <div class="favoriteColItem" >
+                    <a href="https://sm.intranet/sm/index.do" class="btn btn-sm btn-primary" ><img src="img/logoSC.png" > Service Manager</a>
+                  </div>
 
               </div>
 
 
-              <div class="favoriteCol">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item">
+          <img src="img/item2.jpg" >
+          <div class="container">
+            <div class="carousel-caption">
+
+              <div class="favoriteCol" style="margin-left: 276px;" >
 
                   <h3><span class="glyphicon glyphicon-phone-alt"></span> SACA</h3>
 
@@ -167,47 +188,31 @@
                       <a href="https://saca.intranet.uol.com.br/admin/veratendente.html" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-user"></span> Permissões</a>
                     </div>
 
-
-                      <div class="favoriteColItem" >
-                      <a href="http://10.133.5.16/GeraPermissao.jnlp" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-lock"></span> Gera Permissão</a>
-                    </div>
-
                     <div class="favoriteColItem" >
-                      <a href="http://csicrm.intranet.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoPlusoft.png" alt="Second slide"> Plus Soft</a>
+                      <a href="http://csicrm.intranet.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoPlusoft.png" > Plus Soft</a>
                     </div>
 
               </div>
 
 
-              <div class="favoriteCol">
+              <div class="favoriteCol" style="margin-left: 96px;" >
 
-                  <h3><span class="glyphicon glyphicon-cutlery"></span> teis</h3>
+                    <h3><span class="glyphicon glyphicon-cutlery"></span> teis</h3>
 
                     <div class="favoriteColItem" >
-                      <div class="btn-group">
-                        <a href="https://jira.intranet.uol.com.br/" class="btn btn-sm btn-primary" ><img src="img/logoJira.png" alt="Second slide"> Jira &nbsp; <span class="glyphicon glyphicon-align-center"></span> </a>
-                        <a href="#" id="bkButton" class="btn btn-sm btn-primary" >BK <span class="glyphicon glyphicon-book"></span> </a>
-                      </div>
+                      <a href="https://search.splunk.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoSplunk.png"> &nbsp; Splunk</a>
                     </div>
 
                     <div class="favoriteColItem" >
-                      <a href="https://confluence.intranet.uol.com.br/confluence/display/cad/Home" class="btn btn-sm btn-primary" ><img src="img/logoConfluence.png" alt="Second slide"> Confluence</a>
+                      <a href="https://config-manager.intranet.uol.com.br/app-check/servers.html" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-cloud"></span> AppCheck</a>
                     </div>
 
                     <div class="favoriteColItem" >
-                      <a href="https://macs.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoMacs.png" alt="Second slide"> MACS</a>
+                      <a href="https://uolsa.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoUolBallOnly.png"> &nbsp;  Intranet</a>
                     </div>
 
                     <div class="favoriteColItem" >
-                      <a href="https://servicedesk.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoSC.png" alt="Second slide"> Service Center</a>
-                    </div>
-
-                    <div class="favoriteColItem" >
-                      <a href="http://a1-integcadf-s-pla1:8080/jenkins/" class="btn btn-sm btn-primary" ><img src="img/logoJenkins.png" alt="Second slide"> Jenkins</a>
-                    </div>
-
-                    <div class="favoriteColItem" >
-                      <a href="https://search.splunk.intranet/" class="btn btn-sm btn-primary" ><img src="img/logoSplunk.png" alt="Second slide"> Splunk</a>
+                      <a href="https://saprhuol.uolcorp.intranet" class="btn btn-sm btn-primary" ><img src="img/logoUolBallOnly.png"> &nbsp;  SAP RH</a>
                     </div>
 
                     <div class="favoriteColItem" >
@@ -215,30 +220,15 @@
                     </div>
 
                     <div class="favoriteColItem" >
-                      <a href="https://config-manager.intranet.uol.com.br/app-check/servers.html" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-cloud"></span> AppCheck</a>
+                      <a href="http://a1-jaiminho-q-pla1.host.intranet:58080/jmx-console/HtmlAdaptor?action=inspectMBean&name=uol.backoffice.notifier%3Acustom%3DSmtpProxy" class="btn btn-sm btn-primary" ><span class="glyphicon glyphicon-envelope"></span> &nbsp;Jaiminho</a>
                     </div>
 
                      <div class="favoriteColItem" >
-                      <a href="#" class="btn btn-sm btn-primary" id="lmgtfu" ><span class="glyphicon glyphicon-asterisk"></span> lmgtfu</a>
+                      <a href="#" class="btn btn-sm btn-primary" id="lmgtfu" ><img src="img/logoGoogle.fw.png"> &nbsp; lmgtfu</a>
                     </div>
-
 
               </div>
 
-              <!-- h1>Favoritos</h1>
-              <p><a class="btn btn-default" href="https://cadastro.acesso.uol.com.br/login.html">Login</a></p>
-              < p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p-->
-
-            </div>
-          </div>
-        </div>
-
-
-        <div class="item">
-          <img src="img/item2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Aniversários</h1>
 
             </div>
           </div>
@@ -248,12 +238,64 @@
 
 
         <div class="item">
-          <img src="img/item3.jpg" alt="Second slide">
+          <img src="img/item3.jpg" >
           <div class="container">
             <div class="carousel-caption">
-              <h1>Descompilados</h1>
-              <p>Eu adoraria mudar o mundo, mas não me deram o código-fonte.</p>
-              <!--p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p-->
+
+              <div class="favoriteCol" style="margin-left: 296px;" >
+
+                  <h3><img src="img/logoGit.png"> Git's</h3>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://web.gituol.intranet/plataforma/sac/sac.git/tree/master" class="btn btn-sm btn-primary" >SAC</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://web.gituol.intranet/plataforma/sac/sac-dolphin.git/tree/master" class="btn btn-sm btn-primary" >SAC Dolphin</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://web.gituol.intranet/plataforma/sac/sac-legacy.git/tree/master" class="btn btn-sm btn-primary" >SAC Legacy</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://web.gituol.intranet/plataforma/sac/sac-templates.git/tree/master" class="btn btn-sm btn-primary" >SAC Templates</a>
+                  </div>
+
+              </div>
+
+
+              <div class="favoriteCol" style="margin-left: 66px;" >
+
+                  <h3><img src="img/logoSubversion.fw.png"> SVN's</h3>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://svnuol.intranet/templates/" class="btn btn-sm btn-primary" >Templates</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://publicador.svn.intranet/repository/webcontent/com/jsuol/bk" class="btn btn-sm btn-primary" >jsUOL</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://publicador.svn.intranet/repository/metatemplate/br/com/uol/sac/_templates/publicador_monaco/sac" class="btn btn-sm btn-primary" >Mônaco</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://publicador.svn.qa.intranet/repository/webcontent/com/jsuol" class="btn btn-sm btn-primary" >jsUOL QA</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://publicador.svn.intranet/repository/webcontent/br/com/uol/imagens/imguol.com/p/sac/uol/images" class="btn btn-sm btn-primary" >imgUOL</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://publicador.svn.qa.intranet/repository/webcontent/com/imguol/p/sac/uol/images" class="btn btn-sm btn-primary" >imgUOL QA</a>
+                  </div>
+
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -261,12 +303,46 @@
 
 
         <div class="item">
-          <img src="img/item4.jpg" alt="Second slide">
+          <img src="img/item4.jpg" >
           <div class="container">
             <div class="carousel-caption">
-              <h1>Show!</h1>
-              <p>Falar é fácil. Mostre-me o código.</p>
-              <!-- p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p -->
+
+              <div class="favoriteCol" style="margin-left: 366px;" >
+
+                  <h3><img src="img/logoSocial.png"> Social</h3>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://www.facebook.com/" class="btn btn-sm btn-primary" ><img src="img/social/facebook.png" > &nbsp; Facebook</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://twitter.com/" class="btn btn-sm btn-primary" ><img src="img/social/twitter.png" > &nbsp; Twitter</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://www.linkedin.com/" class="btn btn-sm btn-primary" ><img src="img/social/linkedin.png" > &nbsp; Linked in</a>
+                  </div>
+
+              </div>
+
+              <div class="favoriteCol" style="margin-left: 96px;" >
+
+                  <h3>&nbsp; </h3>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://plus.google.com/" class="btn btn-sm btn-primary" ><img src="img/social/google.png" > &nbsp; Google +</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="http://instagram.com/" class="btn btn-sm btn-primary" ><img src="img/social/instagram.png" > &nbsp; Instagram</a>
+                  </div>
+
+                  <div class="favoriteColItem" >
+                    <a href="https://ello.co" class="btn btn-sm btn-primary" ><img src="img/social/bloglovin.png" > &nbsp; Ello</a>
+                  </div>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -275,19 +351,8 @@
 
 
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
     </div><!-- /.carousel -->
-
-
-
-      <!-- FOOTER >
-      <footer>
-        <p class="pull-right"></p>
-        <p></p>
-      </footer -->
-
-    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -295,10 +360,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/holder.js"></script>
-
-    <!-- CUSTOM BROWSER BOOT -->
-    <script src="configs/aniversariantes.js"></script>
     <script src="js/browserBoot.js"></script>
 
   </body>

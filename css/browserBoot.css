@@ -2,11 +2,17 @@ body{
 	overflow: auto;
 }
 
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-nav li a{
+	outline: none;
+}
+
 
 .carousel-caption {
-    left: 20%;
     padding-bottom: 70px;
-    right: 20%;
     bottom: none;
     top: 30%;
 }
@@ -19,14 +25,20 @@ body{
 }
 
 
-
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus  {
+    background-color: #FFF;
+    background-image: none;
+    border-color: transparent;
+    color: #232423;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
 
 
 .favoriteCol{
 	/** border: thin dotted #333333; **/
 	float: left;
 	min-width: 170px;
-	width: 25%;
+	/**width: 25%; */
 	height: 300px;
 	margin: 0;
 	padding: 5px;
@@ -44,9 +56,10 @@ body{
 
 
 	.favoriteColItem .btn {
-		font-weight: bold;
+		font-weight: normal;
 		min-width: 130px;
 		text-align: left;
+		padding: 10px;
 	}
 
 	.btn-group .btn {
@@ -56,7 +69,7 @@ body{
 
 
 #googleBox{
-	width: 250px;
+	width: 150px;
 	float: right;
 	margin: 9px 10px 0px 0px;
 }
