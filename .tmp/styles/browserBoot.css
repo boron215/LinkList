@@ -1,0 +1,74 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\000031}}
+body {
+  overflow: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\000035}}
+body .navbar-brand {
+  padding: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\000039}}
+body .navbar-nav li a {
+  outline: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000313}}
+body .carousel-caption {
+  padding-bottom: 70px;
+  bottom: none;
+  top: 30%;
+}
+@media (max-width: 1024px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000321}}
+  body .carousel-inner {
+    overflow: auto;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000327}}
+body .btn-primary, body .btn-primary:hover, body .btn-primary:active, body .btn-primary:focus {
+  background-color: #FFF;
+  background-image: none;
+  border-color: transparent;
+  color: #232423;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000335}}
+body .favoriteCol {
+  /** border: thin dotted #333333; **/
+  float: left;
+  min-width: 170px;
+  /**width: 25%; */
+  height: 300px;
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000346}}
+body .favoriteCol:first-child {
+  border-left: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000350}}
+body .favoriteColItem {
+  margin: 7px 0;
+  margin: 7px 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000356}}
+body .favoriteColItem .btn {
+  font-weight: normal;
+  min-width: 130px;
+  text-align: left;
+  padding: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000363}}
+body .btn-group .btn {
+  min-width: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000367}}
+body #googleBox {
+  width: 150px;
+  float: right;
+  margin: 9px 10px 0px 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/A\:\/LinkList\/app\/styles\/browserBoot\.scss}line{font-family:\0000373}}
+body #googleBox input#googleSearchQuery {
+  border-radius: 4px;
+  padding: 4px;
+  background: url("../images/bgOraculo.png") no-repeat #FFFFFF 6px 4px;
+}
