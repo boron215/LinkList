@@ -1,0 +1,174 @@
+@import "libs/measures";
+@import "libs/fonts.scss";
+
+body{
+
+    overflow: auto;
+    color: #5a5a5a;
+
+    .navbar-wrapper{
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+
+        .container {
+
+            padding-left: 0;
+            padding-right: 0;
+
+            .navbar {
+
+                @media (max-width:$col-sm){
+                    padding: 0;
+                }
+
+                .navbar-header{
+
+                    img{
+                        border: none;
+                        outline: none;
+                    }
+
+                }
+
+                .navbar-collapse{
+
+                    ul.navbar-nav li a{
+                        outline: none;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .modal-shadow {
+
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        z-index: 1;
+        display: none;
+
+    }
+
+    #myCarousel.carousel{
+
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        .carousel-caption {
+            padding-bottom: 70px;
+            bottom: 0;
+            top: 30%;
+            z-index: 10;
+        }
+
+        .item {
+            height: 100%;
+            background-color: #FDEFCC;
+        }
+
+
+        .carousel-inner {
+
+            background-color: #FDEFCC;
+            height: 100%;
+
+            > .item > img {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                max-height: 100%;
+                max-width: none;
+            }
+
+        }
+
+        .carousel-indicators{
+
+            cursor: default;
+
+            .active{
+                background-color: #333;
+            }
+
+            li {
+
+                border: 1px solid #333;
+                cursor: default;
+
+                &:hover{
+                    background-color: #666;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus  {
+        background-color: #FFF;
+        background-image: none;
+        border-color: transparent;
+        color: #232423;
+    }
+
+
+    .favoriteCol{
+        float: left;
+        min-width: 170px;
+        height: 300px;
+        margin: 0;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .favoriteCol:first-child{
+        border-left: none;
+    }
+
+    .favoriteColItem{
+        margin: 7px 0;
+        margin: 7px 5px;
+    }
+
+
+    .favoriteColItem .btn {
+        font-weight: normal;
+        min-width: 130px;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .btn-group .btn {
+        min-width: 0;
+    }
+
+    #googleBox{
+        width: 150px;
+        float: right;
+        margin: 9px 10px 0px 0px;
+    }
+
+    #googleBox input#googleSearchQuery{
+        border-radius: 4px;
+        padding: 4px;
+        background: url('../images/bgOraculo.png') no-repeat #FFFFFF 6px 4px;
+    }
+
+}
+
+

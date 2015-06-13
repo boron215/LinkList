@@ -1,12 +1,15 @@
+'use strict';
+
 var UOL = window.UOL || function() {};
 UOL.browserBoot = function() {};
 
 UOL.browserBoot = {
 
-    init: function(e) {
+    init: function() {
 
         UOL.browserBoot.search.init();
         UOL.browserBoot.carousel.init();
+        UOL.browserBoot.menu.init();
         UOL.browserBoot.especialButtons.jira.init();
         UOL.browserBoot.especialButtons.lmgtfu.init();
 
@@ -21,17 +24,17 @@ UOL.browserBoot = {
 
             $inputVal.focus();
 
-            if ($inputVal.val() !== "") {
+            if ($inputVal.val() !== '') {
                 $inputVal.css('backgroundImage', 'none');
             } else {
-                $inputVal.css('backgroundImage', "url('img/bgOraculo.png')");
+                $inputVal.css('backgroundImage', 'url(\'images/bgOraculo.png\')');
             }
 
             $inputVal.keyup(function() {
-                if ($(this).val() !== "") {
+                if ($(this).val() !== '') {
                     $(this).css('backgroundImage', 'none');
                 } else {
-                    $(this).css('backgroundImage', "url('img/bgOraculo.png')");
+                    $(this).css('backgroundImage', 'url(\'images/bgOraculo.png\')');
                 }
             });
 
@@ -45,7 +48,7 @@ UOL.browserBoot = {
             var $form = $('form#googleSearch');
             var action = $('form#googleSearch').attr('action');
 
-            if (inputVal == "") {
+            if (inputVal === '') {
                 return false;
             } else {
                 $form.attr('action', action + inputVal);
@@ -64,26 +67,66 @@ UOL.browserBoot = {
             // Move o Carrossel de acordo com a Roda do Mouse
             $('body').bind('mousewheel DOMMouseScroll', function(e) {
 
-                if (this) {
-                    //console.log(this);
-                }
-
-                var scrollTo = 0;
                 var delta = 0;
-                e.preventDefault();
-                if (e.type == 'mousewheel') {
-                    scrollTo = (e.originalEvent.wheelDelta * -1);
+
+                if (e.type === 'mousewheel') {
                     delta = e.originalEvent.wheelDelta;
-                } else if (e.type == 'DOMMouseScroll') {
-                    scrollTo = 40 * e.originalEvent.detail;
+                } else if (e.type === 'DOMMouseScroll') {
                     delta = e.originalEvent.detail;
                 }
 
                 if (delta > 0) {
-                    $('[data-ride="carousel"]').carousel('next');
+                    $('#myCarousel').carousel('next');
                 } else {
-                    $('[data-ride="carousel"]').carousel('prev');
+                    $('#myCarousel').carousel('prev');
                 }
+
+                e.preventDefault();
+
+            });
+
+
+            $('#myCarousel').on('slid.bs.carousel', function(){
+
+                var carouselData = $(this).data('bs.carousel');
+                var currentIndex = carouselData.getActiveIndex();
+
+                var prevMenuElement = $('ul.nav.navbar-nav li.active' );
+                prevMenuElement.removeClass('active');
+
+                var nextMenuElement = $('ul.nav.navbar-nav li:eq(' + currentIndex + ')' );
+                nextMenuElement.addClass('active');
+
+            });
+
+
+        }
+
+    },
+
+
+    menu : {
+
+        init : function(){
+            this.setCollapseListenersForMobiles();
+        },
+
+        setCollapseListenersForMobiles : function(){
+
+            $('.navbar-collapse li').click(function(){
+                $('.navbar-collapse').collapse('hide');
+                $('.modal-shadow').hide();
+            });
+
+
+            $('.navbar-collapse').on('shown.bs.collapse', function(){
+                $('.modal-shadow').show();
+            });
+
+
+            $('.modal-shadow').click(function(){
+                $('.navbar-collapse').collapse('hide');
+                $('.modal-shadow').hide();
             });
 
         }
@@ -101,8 +144,8 @@ UOL.browserBoot = {
 
             activateJiraButton: function() {
                 $('#bkButton').click(function() {
-                    var bk = prompt("Por favor, informe o ID da historia");
-                    if (bk !== "" && bk !== null) {
+                    var bk = prompt('Por favor, informe o ID da historia.');
+                    if (bk !== '' && bk !== null) {
                         UOL.browserBoot.especialButtons.jira.openBackLog(bk);
                     }
                 });
@@ -122,8 +165,8 @@ UOL.browserBoot = {
 
             activateLmgtfuButton: function() {
                 $('#lmgtfu').click(function() {
-                    var q = prompt("Por favor, informe query do Google:");
-                    if (q !== "" && q !== null) {
+                    var q = prompt('Por favor, informe query do Google:');
+                    if (q !== '' && q !== null) {
                         UOL.browserBoot.especialButtons.lmgtfu.openBackLog(q);
                     }
                 });
@@ -133,9 +176,7 @@ UOL.browserBoot = {
                 window.location = 'http://lmgtfy.com/?q=' + q;
             }
 
-        },
-
-
+        }
 
     }
 

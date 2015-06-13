@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="SHORTCUT ICON" href="favicon.ico"/>
+        <title>Link List</title>
+        <!-- build:css(.tmp) styles/link-list-style.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <link href="styles/link-list.css" rel="stylesheet">
+        <!-- endbuild -->
+    </head>
+
+    <body>
+        <div class="navbar-wrapper">
+            <div class="container">
+                <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <img src="images/logo.png"/>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#" data-target="#myCarousel" data-slide-to="0">1</a></li>
+                            <li><a href="#" data-target="#myCarousel" data-slide-to="1">2</a></li>
+                            <li><a href="#" data-target="#myCarousel" data-slide-to="2">3</a></li>
+                            <li><a href="#" data-target="#myCarousel" data-slide-to="3">4</a></li>
+                        </ul>
+
+                        <div id="googleBox" class="hidden-xs">
+                            <form action="https://www.google.com.br/#q=" onsubmit="return UOL.browserBoot.search.cheatGoogle()"
+                                  id="googleSearch">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="googleSearchQuery" autocomplete="off">
+                                        </td>
+                                        <td>
+                                            <input type="submit" value="ok" class="hidden"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hidden-lg hidden-md">
+            <div class="modal-shadow"></div>
+        </div>
+
+        <div id="myCarousel" class="carousel slide" data-interval="false">
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                include "tab1.html"
+                include "tab2.html"
+                include "tab3.html"
+                include "tab4.html"
+            </div>
+        </div>
+
+        <div id="useMinBlock" >
+
+            <!-- build:js(.) scripts/vendor.js -->
+            <!-- bower:js -->
+            <script src="bower_components/jquery/dist/jquery.js"></script>
+            <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
+            <!-- endbower -->
+            <!-- endbuild -->
+
+            <!-- build:js(app) scripts/script.js -->
+            <script src="scripts/link-list.js"></script>
+            <!-- endbuild -->
+
+        </div>
+
+    </body>
+</html>
