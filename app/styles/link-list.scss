@@ -1,5 +1,7 @@
 @import "libs/measures";
 @import "libs/fonts.scss";
+@import "libs/utils.scss";
+
 
 body{
 
@@ -66,34 +68,6 @@ body{
         position: absolute;
         width: 100%;
 
-        .carousel-caption {
-            padding-bottom: 70px;
-            bottom: 0;
-            top: 30%;
-            z-index: 10;
-        }
-
-        .item {
-            height: 100%;
-            background-color: #FDEFCC;
-        }
-
-
-        .carousel-inner {
-
-            background-color: #FDEFCC;
-            height: 100%;
-
-            > .item > img {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                max-height: 100%;
-                max-width: none;
-            }
-
-        }
-
         .carousel-indicators{
 
             cursor: default;
@@ -114,6 +88,45 @@ body{
             }
 
         }
+
+        .carousel-inner {
+
+            background-color: #FDEFCC;
+            height: 100%;
+
+            .item{
+
+                height: 100%;
+                padding-top: 60px;
+                background-size: contain;
+                background: left bottom #FDEFCC no-repeat;
+
+                &.tab1{
+                    background-image: url('../images/bgs/item1.jpg');
+                }
+
+                &.tab2{
+                    background-image: url('../images/bgs/item2.jpg');
+                }
+
+                &.tab3{
+                    background-image: url('../images/bgs/item3.jpg');
+                }
+
+                &.tab4{
+                    background-image: url('../images/bgs/item4.jpg');
+                }
+
+                .container{
+                    height:100%;
+                }
+
+
+            }
+
+        }
+
+
 
     }
 
@@ -166,7 +179,7 @@ body{
     #googleBox input#googleSearchQuery{
         border-radius: 4px;
         padding: 4px;
-        background: url('../images/bgOraculo.png') no-repeat #FFFFFF 6px 4px;
+        background: url('../images/icons/bgOraculo.png') no-repeat #FFFFFF 9px 7px;
     }
 
 }

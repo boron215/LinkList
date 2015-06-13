@@ -349,7 +349,8 @@ module.exports = function (grunt) {
                 dest: '<%= yeoman.app %>/index.html',
                 options: {
                     flatten: true,
-                    includePath: '<%= yeoman.app %>/tabs'
+                    includePath: '<%= yeoman.app %>/tabs',
+                    banner: '<!-- Link List - By Romulo Bordezani to UOL -->\n'
                 }
             }
         },

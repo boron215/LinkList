@@ -27,14 +27,14 @@ UOL.browserBoot = {
             if ($inputVal.val() !== '') {
                 $inputVal.css('backgroundImage', 'none');
             } else {
-                $inputVal.css('backgroundImage', 'url(\'images/bgOraculo.png\')');
+                $inputVal.css('backgroundImage', 'url(\'images/icons/bgOraculo.png\')');
             }
 
             $inputVal.keyup(function() {
                 if ($(this).val() !== '') {
                     $(this).css('backgroundImage', 'none');
                 } else {
-                    $(this).css('backgroundImage', 'url(\'images/bgOraculo.png\')');
+                    $(this).css('backgroundImage', 'url(\'images/icons/bgOraculo.png\')');
                 }
             });
 
