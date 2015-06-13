@@ -6,3 +6,4 @@ bower_components
 dist
 npm-debug.log
 app/index.html
+.sass-cache
