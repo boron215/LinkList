@@ -97,6 +97,11 @@ UOL.browserBoot = {
                 var nextMenuElement = $('ul.nav.navbar-nav li:eq(' + currentIndex + ')' );
                 nextMenuElement.addClass('active');
 
+                // Jenkins integration, only calls in the Jenkins tab
+                if(currentIndex === 4 ){
+                    UOL.browserBoot.jenkins.callRestAPI();
+                }
+
             });
 
 
@@ -129,6 +134,21 @@ UOL.browserBoot = {
                 $('.modal-shadow').hide();
             });
 
+        }
+
+    },
+
+
+    jenkins : {
+
+        callRestAPI : function(){
+            $.ajax({
+                dataType: 'json',
+                url: 'http://d3-integplat-stg4:8080/view/Sac-Template/api/json?pretty=true',
+                success: function(data){
+                    console.log(data);
+                }
+            });
         }
 
     },
