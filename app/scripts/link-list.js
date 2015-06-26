@@ -17,20 +17,20 @@ UOL.browserBoot = {
 
     search: {
 
-        init: function() {
+        init: function(){
 
             // Inicializa as funcionalidades da Busca Fake do Google
-            var $inputVal = $('form#googleSearch #googleSearchQuery');
+            var inputVal = $('form#googleSearch #googleSearchQuery');
 
-            $inputVal.focus();
+            inputVal.focus();
 
-            if ($inputVal.val() !== '') {
-                $inputVal.css('backgroundImage', 'none');
+            if (inputVal.val() !== '') {
+                inputVal.css('backgroundImage', 'none');
             } else {
-                $inputVal.css('backgroundImage', 'url(\'images/icons/bgOraculo.png\')');
+                inputVal.css('backgroundImage', 'url(\'images/icons/bgOraculo.png\')');
             }
 
-            $inputVal.keyup(function() {
+            inputVal.keyup(function() {
                 if ($(this).val() !== '') {
                     $(this).css('backgroundImage', 'none');
                 } else {
