@@ -7,8 +7,11 @@ UOL.browserBoot = {
 
     init: function() {
 
+
+
         UOL.browserBoot.search.init();
         UOL.browserBoot.carousel.init();
+        UOL.browserBoot.carousel.randomImage();
         UOL.browserBoot.menu.init();
         UOL.browserBoot.especialButtons.jira.init();
         UOL.browserBoot.especialButtons.lmgtfu.init();
@@ -105,6 +108,10 @@ UOL.browserBoot = {
             });
 
 
+        },
+
+        randomImage : function(){
+            $('.tab').removeClass('tab1').addClass('tab' + ( Math.floor( Math.random()*5) + 1 ) );
         }
 
     },
@@ -164,7 +171,7 @@ UOL.browserBoot = {
 
             activateJiraButton: function() {
                 $('#bkButton').click(function() {
-                    var bk = prompt('Por favor, informe o ID da historia.');
+                    var bk = prompt('What issue?');
                     if (bk !== '' && bk !== null) {
                         UOL.browserBoot.especialButtons.jira.openBackLog(bk);
                     }
@@ -172,7 +179,7 @@ UOL.browserBoot = {
             },
 
             openBackLog: function(bk) {
-                window.location = 'https://jira.intranet.uol.com.br/jira/browse/' + bk;
+                window.location = 'https://loftylofty.atlassian.net/browse/LFT-' + bk;
             }
 
         },

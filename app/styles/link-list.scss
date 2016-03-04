@@ -6,7 +6,7 @@
 body{
 
     overflow: auto;
-    color: #5a5a5a;
+    color: #000;
 
     .navbar-wrapper{
 
@@ -23,6 +23,8 @@ body{
 
             .navbar {
 
+                opacity: 0.7;
+
                 @media (max-width:$col-sm){
                     padding: 0;
                 }
@@ -32,6 +34,8 @@ body{
                     img{
                         border: none;
                         outline: none;
+                        width: 120px;
+                        margin: 15px;
                     }
 
                 }
@@ -91,15 +95,15 @@ body{
 
         .carousel-inner {
 
-            background-color: #FDEFCC;
+            background-color: #FFFFFS;
             height: 100%;
 
             .item{
 
                 height: 100%;
                 padding-top: 60px;
-                background: left bottom #FDEFCC no-repeat;
-                background-size: contain;
+                background: left top #000 no-repeat;
+                background-size: cover;
 
                 &.tab1{
                     background-image: url('../images/bgs/item1.jpg');
@@ -123,6 +127,13 @@ body{
 
                 .container{
                     height:100%;
+
+                    h3{
+                        color: #FFFFFF;
+
+                        @include text-shadow();
+
+                    }
                 }
 
 
@@ -158,8 +169,23 @@ body{
     }
 
     .favoriteColItem{
+
         margin: 7px 0;
         margin: 7px 5px;
+
+        a{
+            cursor: context-menu;
+            line-height: 17px;
+
+            img{
+                max-width: 16px;
+                margin-right: 6px;
+                max-height:16px;
+            }
+
+        }
+
+
     }
 
 
@@ -175,15 +201,17 @@ body{
     }
 
     #googleBox{
-        width: 150px;
+        width: 135px;
         float: right;
-        margin: 9px 10px 0px 0px;
+        margin: 10px 0px 0px 0px;
     }
 
     #googleBox input#googleSearchQuery{
         border-radius: 4px;
         padding: 4px;
-        background: url('../images/icons/bgOraculo.png') no-repeat #FFFFFF 9px 7px;
+        background: url('../images/icons/bgOraculo.png') no-repeat #FFFFFF 7px 1px;
+        background-size: contain;
+        border: none;
     }
 
 }

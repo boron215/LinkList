@@ -4,9 +4,27 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="SHORTCUT ICON" href="favicon.ico"/>
-        <title>Link List</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Lofty's Links</title>
         <!-- build:css(.tmp) styles/link-list-style.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
@@ -21,28 +39,13 @@
                 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
 
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <img src="images/logo.png"/>
+                        <img src="images/logo.svg"/>
                     </div>
 
                     <div class="navbar-collapse collapse">
 
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#" data-target="#myCarousel" data-slide-to="0">&middot;</a></li>
-                            <li><a href="#" data-target="#myCarousel" data-slide-to="1">&middot;</a></li>
-                            <li><a href="#" data-target="#myCarousel" data-slide-to="2">&middot;</a></li>
-                            <li><a href="#" data-target="#myCarousel" data-slide-to="3">&middot;</a></li>
-                            <li><a href="#" data-target="#myCarousel" data-slide-to="4">&middot;</a></li>
-                        </ul>
-
                         <div id="googleBox" class="hidden-xs">
-                            <form action="https://www.google.com.br/#q=" onsubmit="return UOL.browserBoot.search.cheatGoogle()"
-                                  id="googleSearch">
+                            <form action="https://www.google.com/#q=" onsubmit="return UOL.browserBoot.search.cheatGoogle()" id="googleSearch">
                                 <table>
                                     <tr>
                                         <td>
@@ -68,21 +71,8 @@
         </div>
 
         <div id="myCarousel" class="carousel slide" data-interval="false">
-
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-            </ol>
-
             <div class="carousel-inner">
                 include "tab1.html"
-                include "tab2.html"
-                include "tab3.html"
-                include "tab4.html"
-                include "tab5.html"
             </div>
         </div>
 

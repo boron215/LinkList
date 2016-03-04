@@ -1,3 +1,8 @@
+@mixin text-shadow() {
+    -webkit-text-shadow: 1px 1px 5px #333;
+    -moz-text-shadow: 1px 1px 5px #333;
+    text-shadow: 1px 1px 5px #333;
+}
 
 .vertical-align {
     display: flex;
