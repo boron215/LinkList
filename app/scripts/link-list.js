@@ -7,8 +7,6 @@ UOL.browserBoot = {
 
     init: function() {
 
-
-
         UOL.browserBoot.search.init();
         UOL.browserBoot.carousel.init();
         UOL.browserBoot.carousel.randomImage();
@@ -25,7 +23,7 @@ UOL.browserBoot = {
             // Inicializa as funcionalidades da Busca Fake do Google
             var inputVal = $('form#googleSearch #googleSearchQuery');
 
-            inputVal.focus();
+            //inputVal.focus();
 
             if (inputVal.val() !== '') {
                 inputVal.css('backgroundImage', 'none');
