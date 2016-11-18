@@ -165,8 +165,20 @@ UOL.browserBoot = {
             activateJiraButton: function() {
                 $('#bkButton').click(function() {
                     var bk = prompt('Por favor, informe o ID da historia.');
-                    if (bk !== '' && bk !== null) {
+                    if ( bk !== '' && bk !== null) {
+
+                        if( bk.indexOf('CHECK-') < 0 ){
+
+                            if( bk.match( /([A-Z])\w+/g ) === null  ){
+                                bk = 'CHECK-' + bk;
+                            }
+
+                        }
+
                         UOL.browserBoot.especialButtons.jira.openBackLog(bk);
+
+                    }else{
+                        alert('Ooops! Cadê o ID da história?');
                     }
                 });
             },
